@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sua Pixel Art está Pronta!</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        img { max-width: 90%; border: 2px solid #333; margin-top: 20px; image-rendering: pixelated; }
+        .links { margin-top: 20px; }
+        a { display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px; margin: 5px; }
+        a:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Sua Pixel Art está Pronta!</h1>
+    
+    <img src="{{ url_for('static', filename='processadas/' + imagem_processada) }}" alt="Imagem em Pixel Art">
+    
+    <div class="links">
+        <a href="{{ url_for('download_file', filename=imagem_processada) }}">Baixar Imagem</a>
+        <a href="{{ url_for('index') }}">Converter Outra</a>
+    </div>
+
+</body>
+</html>
